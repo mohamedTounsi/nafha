@@ -124,7 +124,7 @@ function ShopContent() {
       </section>
 
       {/* Main Content */}
-      <section className="max-w-[2000px] mx-auto px-2 md:px-10 py-12 md:py-24 flex flex-col md:flex-row gap-12">
+      <section className="max-w-[2000px] mx-auto px-3 md:px-10 py-12 md:py-24 flex flex-col md:flex-row gap-12">
 
         {/* Sidebar (Desktop only) */}
         <aside className="hidden md:block w-full md:w-[30%] space-y-12">
@@ -256,9 +256,9 @@ function ShopContent() {
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8 items-stretch">
               <AnimatePresence mode="popLayout">
                 {filteredProducts.map((product) => (
-                  <motion.div key={product._id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.25 }} className="h-full">
+                  <div key={product._id} className="h-full">
                     <ProductCard product={product} onAddToCart={addToCart} />
-                  </motion.div>
+                  </div>
                 ))}
               </AnimatePresence>
             </div>

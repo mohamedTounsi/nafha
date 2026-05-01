@@ -24,8 +24,8 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-10">
             <Link href="/" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">Home</Link>
             <Link href="/shop" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">Shop</Link>
-            <Link href="/about" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">About</Link>
-            <Link href="/contact" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">Contact</Link>
+            <Link href="#" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">About</Link>
+            <Link href="#" className="text-[11px] font-black uppercase tracking-[0.2em] text-black/70 hover:text-black transition-colors">Contact</Link>
           </div>
         </div>
 
@@ -68,8 +68,8 @@ export default function Navbar() {
         >
           <Link onClick={() => setIsMenuOpen(false)} href="/" className="text-2xl font-black uppercase italic tracking-tighter text-black border-b-2 border-black pb-4">Home</Link>
           <Link onClick={() => setIsMenuOpen(false)} href="/shop" className="text-2xl font-black uppercase italic tracking-tighter text-black border-b-2 border-black pb-4">Shop</Link>
-          <Link onClick={() => setIsMenuOpen(false)} href="/about" className="text-2xl font-black uppercase italic tracking-tighter text-black border-b-2 border-black pb-4">About</Link>
-          <Link onClick={() => setIsMenuOpen(false)} href="/contact" className="text-2xl font-black uppercase italic tracking-tighter text-black pb-4">Contact</Link>
+          <Link onClick={() => setIsMenuOpen(false)} href="#" className="text-2xl font-black uppercase italic tracking-tighter text-black border-b-2 border-black pb-4">About</Link>
+          <Link onClick={() => setIsMenuOpen(false)} href="#" className="text-2xl font-black uppercase italic tracking-tighter text-black pb-4">Contact</Link>
         </motion.div>
       )}
     </nav>

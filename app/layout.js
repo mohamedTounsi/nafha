@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "nafha.tn | Gaming E-commerce",
+  title: "nafha.tn ",
   description: "The ultimate gaming e-commerce platform in Tunisia.",
 };
 

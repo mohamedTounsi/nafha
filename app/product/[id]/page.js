@@ -42,11 +42,15 @@ export default function ProductDetails({ params }) {
     }
   };
 
-  const buyNow = (product) => {
-    addToCart(product);
+  const [isBuyNow, setIsBuyNow] = useState(false);
+
+  const handleBuyNow = () => {
+    setIsBuyNow(true);
     setIsCartOpen(false);
     setIsCheckoutOpen(true);
   };
+
+  const buyNowItems = isBuyNow ? [{ ...product, quantity: selectedQuantity }] : cart;
 
   if (loading) {
     return (
@@ -166,11 +170,7 @@ export default function ProductDetails({ params }) {
               </button>
               <button 
                 disabled={isSoldOut}
-                onClick={() => {
-                  addToCart(product, selectedQuantity);
-                  setIsCartOpen(false);
-                  setIsCheckoutOpen(true);
-                }}
+                onClick={handleBuyNow}
                 className="bg-primary text-black py-5 rounded-2xl border-2 border-black font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 transition-all disabled:opacity-50 cursor-pointer shadow-[4px_4px_0px_#000000]"
               >
                 <img src="/nafhaicon.webp" className="w-5 h-5 object-contain" alt="Icon" />
@@ -202,6 +202,7 @@ export default function ProductDetails({ params }) {
         cart={cart} 
         onRemove={removeFromCart} 
         onCheckout={() => {
+          setIsBuyNow(false);
           setIsCartOpen(false);
           setIsCheckoutOpen(true);
         }}
@@ -209,11 +210,15 @@ export default function ProductDetails({ params }) {
 
       <CheckoutModal 
         isOpen={isCheckoutOpen} 
-        onClose={() => setIsCheckoutOpen(false)} 
-        cart={cart} 
+        onClose={() => {
+          setIsCheckoutOpen(false);
+          setIsBuyNow(false);
+        }} 
+        cart={buyNowItems} 
         onOrderSuccess={() => {
           setIsCheckoutOpen(false);
-          clearCart();
+          if (!isBuyNow) clearCart();
+          setIsBuyNow(false);
           fetchProduct();
         }}
       />

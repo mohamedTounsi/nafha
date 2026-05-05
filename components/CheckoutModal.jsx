@@ -156,15 +156,29 @@ export default function CheckoutModal({ isOpen, onClose, cart, onOrderSuccess })
                 >
                   <option value="">Select City</option>
                   <option>Tunis</option>
-                  <option>Sousse</option>
-                  <option>Sfax</option>
-                  <option>Bizerte</option>
-                  <option>Gabes</option>
+                  <option>Ariana</option>
+                  <option>Ben Arous</option>
+                  <option>Manouba</option>
                   <option>Nabeul</option>
+                  <option>Zaghouan</option>
+                  <option>Bizerte</option>
+                  <option>Béja</option>
+                  <option>Jendouba</option>
+                  <option>Le Kef</option>
+                  <option>Siliana</option>
                   <option>Kairouan</option>
-                  <option>Monastir</option>
-                  <option>Gafsa</option>
                   <option>Kasserine</option>
+                  <option>Sidi Bouzid</option>
+                  <option>Sousse</option>
+                  <option>Monastir</option>
+                  <option>Mahdia</option>
+                  <option>Sfax</option>
+                  <option>Gafsa</option>
+                  <option>Tozeur</option>
+                  <option>Kebili</option>
+                  <option>Gabès</option>
+                  <option>Medenine</option>
+                  <option>Tataouine</option>
                 </select>
               </div>
 
